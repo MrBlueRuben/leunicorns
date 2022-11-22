@@ -1,6 +1,7 @@
 class UnicornController < ApplicationController
   belongs_to :user
   has_many :bookings
+  validates :name presence: true
 
   def index
     @unicorns = Unicorn.all

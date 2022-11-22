@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
-  belongs_to :unicorn, dependent: :destroy
-  belongs_to :user, dependent: :destroy
+  belongs_to :unicorn
+  belongs_to :user
 
-  validates :date, uniqueness: true, presence: true
+  # validates :date, uniqueness: true, presence: true
 end

@@ -1,4 +1,5 @@
-class UnicornController < ApplicationController
+class UnicornsController < ApplicationController
+  before_action :set_unicorn, only: %i[update edit destroy]
 
   def index
     @unicorns = Unicorn.all
@@ -10,7 +11,7 @@ class UnicornController < ApplicationController
 
   def create
     @unicorn = Unicorn.new(unicorn_params)
-    @unicorn.user_id = current_user.id
+    @unicorn.user = current_user
 
     if @unicorn.save
       redirect_to unicorn_path(@unicorn)
@@ -35,10 +36,10 @@ class UnicornController < ApplicationController
   private
 
   def set_unicorn
-    @exitunicorn = Unicorn.find(params[:id])
+    @unicorn = Unicorn.find(params[:id])
   end
 
   def unicorn_params
-    params.require(:unicorn).permit(:name, :location, :spicies, :user_id)
+    params.require(:unicorn).permit(:name, :description, :location, :spicies, :user_id)
   end
 end

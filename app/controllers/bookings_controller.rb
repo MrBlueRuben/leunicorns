@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_unicorn, only: %i[new create update show edit destroy]
+  before_action :set_booking, only: %i[new create update show edit destroy]
 
   def new
     @booking = Booking.new
@@ -36,8 +36,8 @@ class BookingsController < ApplicationController
 
   private
 
-  def set_unicorn
-    @unicorn = Unicorn.find(params[:id])
+  def set_booking
+    @booking = Booking.find(params[:id])
   end
 
   def booking_params

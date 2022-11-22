@@ -40,6 +40,6 @@ class UnicornsController < ApplicationController
   end
 
   def unicorn_params
-    params.require(:unicorn).permit(:name, :description, :location, :spicies, :user_id)
+    params.require(:unicorn).permit(:name, :description, :photo, :location, :spicies, :user_id)
   end
 end

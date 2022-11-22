@@ -1,6 +1,4 @@
-class UnicornController < ApplicationController
-  belongs_to :user
-  has_many :bookings
+class UnicornsController < ApplicationController
 
   def index
     @unicorns = Unicorn.all
@@ -12,6 +10,7 @@ class UnicornController < ApplicationController
 
   def create
     @unicorn = Unicorn.new(unicorn_params)
+    @unicorn.user_id = current_user.id
 
     if @unicorn.save
       redirect_to unicorn_path(@unicorn)
@@ -36,7 +35,7 @@ class UnicornController < ApplicationController
   private
 
   def set_unicorn
-    @unicorn = Unicorn.find(params[:id])
+    @exitunicorn = Unicorn.find(params[:id])
   end
 
   def unicorn_params

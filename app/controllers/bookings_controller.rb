@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.unicron = @unicorn
+    @booking.unicorn = @unicorn
     if @booking.save
       redirect_to list_path(@unicorn)
     else

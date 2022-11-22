@@ -1,4 +1,4 @@
-class UnicornsController < ApplicationController
+class UnicornController < ApplicationController
 
   def index
     @unicorns = Unicorn.all

@@ -19,15 +19,15 @@
 //   opacity: .7;
 //   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 // }
-.navbar-lewagon {
+.nav-home {
   display: none;
 }
 
 /* landing page */
-body {
+.main {
 // position: relative;
-// width: 1512px;
-// height: 982px;
+width: 100%vw;
+height: 100%vh;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -35,14 +35,14 @@ background: #FFC6FF;
 }
 
 /* Rectangle 14 */
-.rectangle14 {
+.blue-rectangle {
 box-sizing: border-box;
 display: flex;
 align-items: center;
 justify-content: center;
 position: absolute;
-width: 1453px;
-height: 911px;
+width: 90vw;
+height: 90vh;
 left: 43px;
 top: 31px;
 
@@ -69,6 +69,7 @@ margin: 0 auto;
 
 background: url(https://res.cloudinary.com/dbdzimjia/image/upload/v1669200542/leunicorns/le_unicorn_1_epipee.png);
 background-size: cover;
+background-position: 50px;
 border-width: 4px 4px 6px 6px;
 border-style: solid;
 border-color: #000000;
@@ -91,24 +92,37 @@ border-radius: 5px;
 }
 
 // /* Le Unicorn */
-.container h1 {
-position: absolute;
-width: 637px;
-height: 101px;
-left: 387px;
-top: 612px;
+.container {
+// position: absolute;
+width: 60%vw;
+height: 20%vh;
+margin: auto;
+top: 412px;
 
-font-family: 'VT323', monospace;
-font-weight: 300;
-font-size: 120px;
-line-height: 134px;
+
 display: flex;
 align-items: center;
 text-align: center;
 
-color: #9BF6FF;
+
+}
+
+.h1 {
+  font-family: 'VT323', monospace;
+  font-weight: 300;
+  font-size: 120px;
+  line-height: 134px;
+  color: #9BF6FF;
+
 
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin: 0 auto;
+
+}
+
+.h1-container {
+  margin: 0 auto;
+
 }
 
 // /* Rent me */
@@ -117,7 +131,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 // width: 172px;
 // height: 72px;
 // left: 633px;
-// top: 735px;
+top: 535px;
 
 font-family: 'VT323', monospace;
 font-style: normal;

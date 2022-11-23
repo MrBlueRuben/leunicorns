@@ -26,7 +26,7 @@ class UnicornsController < ApplicationController
 
   def edit
   end
-  
+
   def update
     @unicorn.update(booking_params)
     redirect_to booking_path(@unicorn)
@@ -34,7 +34,7 @@ class UnicornsController < ApplicationController
 
   def destroy
     @unicorn.destroy
-    redirect_to unicorn_path(@unicorn), notice: 'unicorn was successfully destroyed'
+    redirect_to unicorns_path, notice: 'unicorn was successfully destroyed'
   end
 
   private

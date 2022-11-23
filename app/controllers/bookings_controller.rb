@@ -1,11 +1,17 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i[new create update show edit destroy]
+  before_action :set_booking, only: %i[update show edit destroy]
+
+  def show
+    @booking = Booking.all
+  end
 
   def new
     @booking = Booking.new
+    @unicorn = Unicorn.find(params[:unicorn_id])
   end
 
   def create
+    @unicorn = Unicorn.find(params[:unicorn_id])
     @booking = Booking.new(booking_params)
     @booking.unicorn = @unicorn
     if @booking.save

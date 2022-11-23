@@ -1,11 +1,22 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello</title>
-</head>
-<body>
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">Available Unicorns</h3>
+  </div>
 
-</body>
-</html>
+  <div class="row">
+    <% @unicorns.each do |unicorn| %>
+      <div class="co-12 colsm-6 col-md-4 bigcard">
+        <% if unicorn.photo.present? %>
+          <%= link_to unicorn_path(unicorn), class:'text-decoration-none' do %>
+            <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path unicorn.photo.key, height: 300, crop: :fill %>')">
+            </div>
+            <div class="box-descrip">
+             <strong><%= unicorn.name %> </strong> <br>
+             <strong>Species: </strong> <%= unicorn.species %> <br>
+             <strong>Price:</strong> €<%= unicorn.price %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>

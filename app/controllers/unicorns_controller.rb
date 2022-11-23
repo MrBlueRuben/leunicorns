@@ -10,6 +10,7 @@ class UnicornsController < ApplicationController
   end
 
   def show
+    @unicorns = Unicorn.all
   end
 
   def create
@@ -43,6 +44,6 @@ class UnicornsController < ApplicationController
   end
 
   def unicorn_params
-    params.require(:unicorn).permit(:name, :description, :photo, :location, :spicies, :user_id)
+    params.require(:unicorn).permit(:name, :description, :photo, :location, :price, :species, :user_id)
   end
 end

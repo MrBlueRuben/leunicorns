@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_151722) do
 
   create_table "bookings", force: :cascade do |t|
     t.date "date"
-    t.boolean "status"
+    t.boolean "status", null: false
     t.bigint "unicorn_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false

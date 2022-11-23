@@ -1,0 +1,10 @@
+<% @unicorns.each do |unicorn| %>
+ Name: <%= unicorn.name %> <br>
+ Species: <%= unicorn.species %> <br>
+ Price: <%= unicorn.price %> <br>
+ Description: <%= unicorn.description %> <br>
+ Location: <%= unicorn.location %> <br>
+ Photo: <%= unicorn.photo %> <br> <br>
+<% end %>
+
+<%= link_to 'Back to all Unicorns', unicorns_path %>

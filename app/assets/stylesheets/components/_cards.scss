@@ -1,0 +1,46 @@
+.bigcard {
+  filter: drop-shadow(10px 10px 4px #000000);
+  border-radius: 5px;
+}
+
+.card-category {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 3px;
+
+}
+
+.card-large {
+  height: 50vh;
+}
+
+.add{
+  border-radius: 10px;
+}
+
+body {
+  background-color: #9BF6FF;
+}
+
+.box-descrip {
+  background-color: #FDFFB6;
+  color: black;
+  font-size: 14px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+}
+
+.price {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 8px;
+  width: 61px;
+  height: 28px;
+  border-radius: 20px;
+}

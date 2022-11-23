@@ -1,5 +1,5 @@
 class UnicornsController < ApplicationController
-  before_action :set_unicorn, only: %i[update edit destroy]
+  before_action :set_unicorn, only: %i[update show edit destroy]
 
   def index
     @unicorns = Unicorn.all
@@ -7,6 +7,9 @@ class UnicornsController < ApplicationController
 
   def new
     @unicorn = Unicorn.new
+  end
+
+  def show
   end
 
   def create

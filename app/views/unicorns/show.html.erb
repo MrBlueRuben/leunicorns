@@ -4,7 +4,17 @@
  Price: <%= unicorn.price %> <br>
  Description: <%= unicorn.description %> <br>
  Location: <%= unicorn.location %> <br>
- Photo: <%= unicorn.photo %> <br> <br>
+ Photo: <%= unicorn.photo %> <br>
+      <div> <%= link_to unicorn_path(@unicorn), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: 'btn btn-danger rounded' do %>
+        <i class="fas fa-trash-alt"></i> Delete unicorn <br>
+      <% end %>
+      </div> <br>
 <% end %>
+    <div>
+      <%= link_to new_unicorn_booking_path(@unicorn), class: 'btn btn-primary rounded' do %>
+        <i class="fas fa-plus"></i> Book this Unicorn
+      <% end %>
+    </div>
+
 
 <%= link_to 'Back to all Unicorns', unicorns_path %>

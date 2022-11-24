@@ -1,10 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #FFC6FF;
+  border-bottom: 4px solid black;
 }
 
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -13,12 +14,30 @@
 }
 
 .nav-link {
-  color: black;
+  color: #F31182;
+  font-size: 22px;
+  //vertical-align: -0.655em;
+  //display: inline;
 }
 .nav-link:hover{
   color: #CAFFBF;
 }
 h1 {
   display: inline;
-  color: antiquewhite;
+  color: #F31182;
+  font-family: 'VT323', monospace;
+  font-size: 70px;
+  margin: 0;
+  padding: 0;
+  // text-align: baseline;
+  vertical-align: -0.155em;
+}
+h1:hover{
+  color: #CAFFBF;
+}
+.form-control {
+  border: 2px solid #F31182;
+}
+.avatar{
+  width: 72px;
 }

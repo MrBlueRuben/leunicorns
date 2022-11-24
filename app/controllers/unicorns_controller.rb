@@ -3,6 +3,14 @@ class UnicornsController < ApplicationController
 
   def index
     @unicorns = Unicorn.all
+
+    @markers = @unicorns.geocoded.map do |unicorn|
+      {
+        lat: unicorn.latitude,
+        lng: unicorn.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {unicorn: unicorn})
+      }
+    end
   end
 
   def new
@@ -11,6 +19,13 @@ class UnicornsController < ApplicationController
 
   def show
     @unicorns = Unicorn.all
+    @markers = @unicorns.geocoded.map do |unicorn|
+      {
+        lat: unicorn.latitude,
+        lng: unicorn.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {unicorn: unicorn})
+      }
+    end
   end
 
   def create

@@ -1,0 +1,22 @@
+<div class="container py-5">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Book this Unicorn!</h3>
+
+        <%= simple_form_for [@unicorn, @booking] do |f| %>
+          <% if @booking.errors.any? %>
+            <div class="alert alert-danger">
+              <h5>You must correct these errors</h5>
+              <ul>
+                <% @booking.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          Starting <%= f.input :date %>
+          Finishing <%= f.input :date %>
+          <%= f.submit class: 'btn btn-primary' %> or
+          <%= link_to 'Cancel', unicorn_path(@unicorn), class: 'text-danger' %>
+        <% end %>
+      </div>
+</div>

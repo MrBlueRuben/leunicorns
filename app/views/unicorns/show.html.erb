@@ -1,20 +1,36 @@
-<% @unicorns.each do |unicorn| %>
- Name: <%= unicorn.name %> <br>
- Species: <%= unicorn.species %> <br>
- Price: <%= unicorn.price %> <br>
- Description: <%= unicorn.description %> <br>
- Location: <%= unicorn.location %> <br>
- Photo: <%= unicorn.photo %> <br>
-      <div> <%= link_to unicorn_path(@unicorn), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: 'btn btn-danger rounded' do %>
-        <i class="fas fa-trash-alt"></i> Delete unicorn <br>
-      <% end %>
-      </div> <br>
-<% end %>
+<div class="ucontainer">
+  <div class="u-photo" style="background-image: url('<%= cl_image_path @unicorn.photo.key, height: 300%>')">
+  </div>
+
+  <div class="u-descrip" >
+    <strong><%= @unicorn.name %> </strong> <br>
+    <%= @unicorn.species %> <br>
+    <strong> Description</strong> <br>
+    <%= @unicorn.description %> <br>
+  </div>
+
+  <div class="u-price">
+    <div class="price"> € <%= @unicorn.price %>
+    </div>
     <div>
-      <%= link_to new_unicorn_booking_path(@unicorn), class: 'btn btn-primary rounded' do %>
+      <%= link_to new_unicorn_booking_path(@unicorn), class: 'btn btn-primary rounded bk-btn' do %>
         <i class="fas fa-plus"></i> Book this Unicorn
       <% end %>
     </div>
 
+      <div> <%= link_to unicorn_path(@unicorn), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: 'btn btn-danger rounded dlt-btn' do %>
+        <i class="fas fa-trash-alt"></i> Delete Unicorn
+      <% end %>
+      </div>
+  </div>
 
-<%= link_to 'Back to all Unicorns', unicorns_path %>
+  <div style="width: 730px height: 300px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+  <div>
+      <%= link_to 'Back to all Unicorns', unicorns_path %>
+  </div>
+</div>

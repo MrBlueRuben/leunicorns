@@ -5,10 +5,12 @@
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 // Your CSS partials
 @import "components/index";
+@import "components/map";
 @import "pages/index";
 @import "pages/home";

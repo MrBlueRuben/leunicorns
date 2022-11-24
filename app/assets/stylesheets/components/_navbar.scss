@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #FFC6FF;
+  border-bottom: 4px solid black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,5 +21,6 @@
 }
 h1 {
   display: inline;
-  color: antiquewhite;
+  color: #6da7ad;
+  font-family: 'VT323', monospace;
 }

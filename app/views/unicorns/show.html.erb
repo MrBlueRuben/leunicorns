@@ -2,11 +2,10 @@
   <div class="u-photo" style="background-image: url('<%= cl_image_path @unicorn.photo.key, height: 300%>')">
   </div>
 
-  <div class="u-descrip" >
-    <strong><%= @unicorn.name %> </strong> <br>
-    <%= @unicorn.species %> <br>
-    <strong> Description</strong> <br>
-    <%= @unicorn.description %> <br>
+  <div class="maps"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
   <div class="u-price">
@@ -24,10 +23,11 @@
       </div>
   </div>
 
-  <div style="width: 730px height: 300px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div class="u-descrip" >
+    <strong><%= @unicorn.name %> </strong> <br>
+    <%= @unicorn.species %> <br>
+    <strong> Description</strong> <br>
+    <%= @unicorn.description %> <br>
   </div>
 
   <div>

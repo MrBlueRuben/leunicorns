@@ -19,7 +19,7 @@ class UnicornsController < ApplicationController
 
   def show
     @unicorns = Unicorn.all
-    @markers = @unicorns.geocoded.map do |unicorn|
+    @markers = [@unicorn].map do |unicorn|
       {
         lat: unicorn.latitude,
         lng: unicorn.longitude,

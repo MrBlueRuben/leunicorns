@@ -14,8 +14,9 @@ class BookingsController < ApplicationController
     @unicorn = Unicorn.find(params[:unicorn_id])
     @booking = Booking.new(booking_params)
     @booking.unicorn = @unicorn
+    @booking.user = current_user
     if @booking.save
-      redirect_to list_path(@unicorn)
+      redirect_to unicorn_path(@unicorn)
     else
       render :new, status: :unprocessable_entity
     end

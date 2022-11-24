@@ -5,7 +5,7 @@
 }
 
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -14,13 +14,24 @@
 }
 
 .nav-link {
-  color: black;
+  color: #F31182;
+  font-size: 22px;
 }
 .nav-link:hover{
   color: #CAFFBF;
 }
 h1 {
   display: inline;
-  color: #6da7ad;
+  color: #F31182;
   font-family: 'VT323', monospace;
+  font-size: 70px;
+  margin: 0;
+  padding: 0;
+  text-align: baseline;
+}
+h1:hover{
+  color: #CAFFBF;
+}
+.form-control {
+  border: 2px solid #F31182;
 }

@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
+    <%= link_to unicorns_path, class: "navbar-brand" do %>
       <%= image_tag "logo.png" %>
       <h1>Le Unicorn</h1>
     <% end %>
@@ -10,6 +10,10 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="search"   aria-label="Search">
+        <%# <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa-thin fa-magnifying-glass"></i></button> %>
+      </form>
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">

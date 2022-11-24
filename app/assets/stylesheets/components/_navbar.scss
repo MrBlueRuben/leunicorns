@@ -16,6 +16,8 @@
 .nav-link {
   color: #F31182;
   font-size: 22px;
+  //vertical-align: -0.655em;
+  //display: inline;
 }
 .nav-link:hover{
   color: #CAFFBF;
@@ -27,11 +29,15 @@ h1 {
   font-size: 70px;
   margin: 0;
   padding: 0;
-  text-align: baseline;
+  // text-align: baseline;
+  vertical-align: -0.155em;
 }
 h1:hover{
   color: #CAFFBF;
 }
 .form-control {
   border: 2px solid #F31182;
+}
+.avatar{
+  width: 72px;
 }

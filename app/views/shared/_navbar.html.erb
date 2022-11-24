@@ -22,11 +22,12 @@
           <li class="nav-item">
             <%= link_to "My Bookings", bookings_path, class: "nav-link" %>
           </li>
-          <li class="nav-item dropdown">
+         <li class="nav-item dropdown">
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://res.cloudinary.com/dbdzimjia/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1668772210/cld-sample.jpg" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
             </div>
           </li>
         <% else %>

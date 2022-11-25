@@ -36,9 +36,10 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+
     @booking.destroy
 
-    redirect_to list_path(@booking), notice: 'booking was successfully destroyed'
+    redirect_to bookings_path, notice: 'booking was successfully destroyed'
   end
 
   private
@@ -48,6 +49,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:date, :unicorn_id, :user_id)
+    params.require(:booking).permit(:date, :end_date, :unicorn_id, :user_id)
   end
 end

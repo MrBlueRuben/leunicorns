@@ -1,0 +1,67 @@
+.containerb {
+  display: grid;
+  justify-content: center;
+}
+
+.book-card {
+  width: 650px;
+  height: 130px;
+  background: #CAFFBF;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 15px;
+  padding: 10px;
+  border: black 4px solid;
+
+  h2 {
+    font-weight: bold;
+
+  }
+}
+
+.titleb{
+  display: grid;
+  justify-content: center;
+  color: #A1C4FF;
+}
+
+.acc-btn {
+  position: absolute;
+  background-color: #FFC6FF;
+  bottom: 10px;
+  right: 125px;
+  border: black;
+}
+
+.rj-btn {
+  position: absolute;
+  background-color: #FFADAD;
+  color: white;
+  right: 15px;
+  bottom: 10px;
+  border: black;
+}
+
+.acc-btn:hover {
+  background-color: #FFC6FF;
+  color: #F31182;
+}
+
+.rj-btn:hover {
+  background-color: #FFADAD;
+  color: #F31182;
+ }
+
+ .b-photo {
+  background-size: cover;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+ }
+
+ .details{
+  position: absolute;
+  left: 80px;
+  bottom: 13px;
+ }

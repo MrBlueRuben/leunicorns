@@ -1,7 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #FFC6FF;
-  border-bottom: 4px solid black;
+  //background: #FFC6FF;
+  background: #FDFFB6;
+  border: 4px solid black;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -29,7 +32,7 @@ h1 {
   font-family: 'VT323', monospace;
   font-size: 70px;
   margin: 0;
-  padding: 0;
+  padding-right: 23px;
   // text-align: baseline;
   vertical-align: -0.155em;
 }
@@ -41,4 +44,28 @@ h1:hover{
 }
 .avatar{
   width: 72px;
+  border: 4px solid black;
 }
+.navbar-brand {
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+  height: 100%;
+  display: flexbox;
+  color: #F31182;
+  background: #FFC6FF;
+}
+.navbar-nav {
+  gap: 22px;
+}
+#navbarSupportedContent {
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+  height: 100%;
+  background-color: #FFC6FF;
+  margin: 0;
+  padding: 15px;
+}
+
+// .navbarSupportedContent {
+//   border-left: 4px solid black;
+// }

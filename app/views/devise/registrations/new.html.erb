@@ -1,9 +1,10 @@
-<h2>Sign up</h2>
+
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
   data: {turbo: false}) do |f| %>
 
-  <div class="form-inputs">
+  <div class="form-inputs uni-form">
+  <h2>Sign up</h2>
       <%= f.input :first_name,
                 required: true,
                 autofocus: true,
@@ -23,11 +24,10 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-  </div>
-
-  <div class="form-actions">
+                  <div class="form-actions btn btn-primary p-0">
     <%= f.button :submit, "Sign up" %>
   </div>
-<% end %>
+  </div>
 
-<%= render "devise/shared/links" %>
+
+<% end %>

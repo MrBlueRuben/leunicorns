@@ -1,3 +1,4 @@
+<div class="uni-form">
 <h2>Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
@@ -10,11 +11,12 @@
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
+      <div class="form-actions btn btn-primary p-0">
     <%= f.button :submit, "Log in" %>
   </div>
-<% end %>
+  <br>
+  <%= render "devise/shared/links" %>
+  </div>
 
-<%= render "devise/shared/links" %>
+
+<% end %>

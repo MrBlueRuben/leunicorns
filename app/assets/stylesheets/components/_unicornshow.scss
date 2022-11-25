@@ -29,7 +29,8 @@
   font-size: 9px;
   margin: 5px;
   background-color: #FFC6FF;
-  border: black 4px solid;
+  border: black 3px solid;
+  left: 1px;
  }
 
 .dlt-btn:hover {
@@ -50,7 +51,7 @@ margin: 5px;
 font-size: 9px;
 color: black;
 background-color: #FFC6FF;
-border: black 4px solid;
+border: black 3px solid;
 }
 
 .prices {
@@ -58,6 +59,9 @@ border: black 4px solid;
   font-weight: bold;
   font-style: italic;
   width: 130px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
 }
 
 .maps {
@@ -76,6 +80,9 @@ border: black 4px solid;
   display: flex;
   justify-content: space-between;
   font-size: 34px;
+  border: black 4px solid;
+  margin-bottom: 16px;
+  align-items: center;
 }
 
 .boxa{
@@ -84,4 +91,8 @@ border: black 4px solid;
 .boxb{
   position: absolute;
   right: 1px;
+}
+
+.uname {
+  margin-left: 10px;
 }

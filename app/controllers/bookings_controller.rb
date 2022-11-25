@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.unicorn = @unicorn
     @booking.user = current_user
+    @booking.status = false
     if @booking.save
       redirect_to unicorn_path(@unicorn)
     else

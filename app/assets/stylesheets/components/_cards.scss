@@ -1,6 +1,6 @@
 .bigcard {
-  filter: drop-shadow(10px 10px 4px #000000);
-  border-radius: 5px;
+  flex: 0 0 auto;
+  width: 280px;
 }
 
 .card-category {
@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  border-radius: 3px;
+  border: black 4px solid;
 
 }
 
@@ -31,8 +31,10 @@ body {
   background-color: #FDFFB6;
   color: black;
   font-size: 14px;
-  border-radius: 3px;
   margin-bottom: 30px;
+  border-bottom: black 4px solid;
+  border-right: black 4px solid;
+  border-left: black 4px solid;
 }
 
 .price {

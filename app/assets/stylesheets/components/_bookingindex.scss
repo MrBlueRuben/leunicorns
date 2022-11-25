@@ -4,17 +4,18 @@
 }
 
 .book-card {
-  width: 650px;
-  height: 130px;
+  width: 694px;
+  height: 220px;
   background: #CAFFBF;
-  border-radius: 5px;
   position: relative;
   margin-top: 15px;
   padding: 10px;
+  border: black 4px solid;
+  padding: 34px;
+  display: flex;
 
   h2 {
     font-weight: bold;
-
   }
 }
 
@@ -27,18 +28,20 @@
 .acc-btn {
   position: absolute;
   background-color: #FFC6FF;
-  bottom: 10px;
-  right: 125px;
-  border: black;
+  bottom: 34px;
+  right: 149px;
+  border: black 4px solid;
+  color: black;
 }
 
 .rj-btn {
   position: absolute;
   background-color: #FFADAD;
   color: white;
-  right: 15px;
-  bottom: 10px;
-  border: black;
+  right: 40px;
+  bottom: 34px;
+  border: black 4px solid;
+  color: black;
 }
 
 .acc-btn:hover {
@@ -53,14 +56,16 @@
 
  .b-photo {
   background-size: cover;
-  border-radius: 5px;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
+  width: 150px;
+  height: 150px;
+  margin: 0px;
+  border: black 4px solid;
+  margin-top: 0px;
  }
 
  .details{
   position: absolute;
-  left: 80px;
-  bottom: 13px;
+  left: 210px;
+  bottom: 48px;
+  width: 298px;
  }

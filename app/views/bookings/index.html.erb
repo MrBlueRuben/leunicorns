@@ -1,2 +1,26 @@
-<h1>My Bookings</h1>
- <%= @bookings %> 
+  <div class="containerb">
+    <div class="titleb"><h1 style="color: #A1C4FF;">My Bookings</h1></div>
+        <% @bookings.each do |booking| %>
+      <div class="book-card">
+            <h2>Details:</h2>
+              <div class="b-photo" style="background-image: url('<%= cl_image_path booking.unicorn.photo.key, height: 50%>')">
+              </div>
+              <div class="details">
+            Unicorn: <%= booking.unicorn.name %> <br>
+            Date <%= booking.date %> <br>
+            to <%= booking.end_date %>
+            </div>
+      <div>
+        <%= link_to unicorns_path, class: 'btn btn-primary rounded acc-btn' do %>
+          <i class="fas fa-plus"></i> Accept
+        <% end %>
+      </div>
+
+      <div> <%= link_to booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},  class: 'btn btn-danger rounded rj-btn' do %>
+        <i class="fas fa-trash-alt"></i> Reject
+      <% end %>
+      </div>
+
+     </div>
+      <% end %>
+  </div>

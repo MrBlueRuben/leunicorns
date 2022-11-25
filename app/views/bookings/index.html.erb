@@ -2,13 +2,13 @@
     <div class="titleb"><h1 style="color: #A1C4FF;">My Bookings</h1></div>
         <% @bookings.each do |booking| %>
       <div class="book-card">
-            <h2>Details:</h2>
               <div class="b-photo" style="background-image: url('<%= cl_image_path booking.unicorn.photo.key, height: 50%>')">
               </div>
               <div class="details">
-            Unicorn: <%= booking.unicorn.name %> <br>
-            Date <%= booking.date %> <br>
-            to <%= booking.end_date %>
+            <h2>Details:</h2>
+            <strong> Unicorn: <%= booking.unicorn.name %></strong> <br>
+            <strong> Date </strong> <%= booking.date %>  <br>
+            <strong> to </strong><%= booking.end_date %>
             </div>
       <div>
         <%= link_to unicorns_path, class: 'btn btn-primary rounded acc-btn' do %>

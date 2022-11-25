@@ -4,6 +4,18 @@ class UnicornsController < ApplicationController
   def index
     @unicorns = Unicorn.all
 
+    if params[:query].present?
+      # @unicorns = Unicorn.where("name ILIKE ?", "%#{params[:query]}%")
+      sql_query = <<~SQL
+      unicorns.name @@ :query
+      OR unicorns.species @@ :query
+      OR unicorns.location @@ :query
+    SQL
+      @unicorns = Unicorn.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @unicorns = Unicorn.all
+    end
+
     @markers = @unicorns.geocoded.map do |unicorn|
       {
         lat: unicorn.latitude,
